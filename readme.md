@@ -1,0 +1,2 @@
+# Aulas front-end SENAI Jandira
+Aulas realizadas no curso técnico de desenvolvimento de sistemas no SENAI Jandira no ano de 2020, na disciplina de programação WEB front-end ministrada pelo professor Fernando Leonid.
