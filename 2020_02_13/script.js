@@ -1,21 +1,19 @@
 const $calcular = document.getElementById('calcular');
-const $exibir = document.getElementById( 'exibir' );
-const $ocultar = document.getElementById( 'ocultar' );
-const $conteiner = document.querySelector( '.conteiner' );
+const $exibir = document.getElementById('exibir');
+const $ocultar = document.getElementById('ocultar');
+const $conteiner = document.querySelector ('.conteiner');
 
-const calcularMedia = ( n1, n2 ) => (parseInt(n1) + parseInt(n2) ) / 2;
-
+const calcularMedia = ( n1, n2 ) => ( parseInt( +n1 ) + parseInt( +n2 ) ) / 2;
+ 
 const verificarSituacao = ( media ) => media >= 5 ? "Aprovado" : "Reprovado";
 
-
 const exibirMedia = () => {
-    const $nome = document.getElementById('nome');
     const nota1 = document.getElementById('nota1').value;
     const nota2 = document.getElementById('nota2').value;
     const $media = document.getElementById('media');
     const $situacao = document.getElementById('situacao');
 
-    const media = calcularMedia ( nota1, nota2 );
+    const media = calcularMedia ( nota1, nota2 ) ;
 
     $situacao.value = verificarSituacao ( media );
 
@@ -33,18 +31,22 @@ const defineConceito =  () => {
         $conceito.value = "D";
     }else if ( media < 8 ) {
         $conceito.value = "C";
-    }else if ( media < 10) {
+    }else if ( media < 10 ) {
         $conceito.value = "B";
     }else {
         $conceito.value = "A";
     }
 }
 
-const calcular = () => {
+const exibirResultados = () => {
     exibirMedia();
-    calcularConceito();
+    defineConceito();
 }
 
-$calcular.addEventListener('click', calcular);
+const exibir = ( el ) =>   el.classList.add ( 'exibir' );
+const ocultar = ( el ) =>   el.classList.remove ( 'exibir' );
 
-const exibir = ( elemento ) => elemento.classList.add( 'exibir' );
+
+$calcular.addEventListener('click', exibirResultados);
+$exibir.addEventListener('click',( ) => exibir ( $conteiner ));
+$ocultar.addEventListener('click',( ) => ocultar ( $conteiner ));
