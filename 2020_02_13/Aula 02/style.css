@@ -1,0 +1,58 @@
+/* Global */
+* {
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+/* Cabeçalho */
+header {
+    width: 100vw;
+    height: 10vh;
+    background-color: #0336ff;
+    color: #ffffff;
+    display: flex;
+    padding-left: 5vw;
+    align-items: center;
+}
+
+/* Conteúdo */
+main {
+    width: 80vw;
+    height: 60vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    background-color: #CEE8CD;
+    margin: 5vh auto;
+    padding: 5vw;
+    box-sizing: border-box;
+}
+
+main label {
+    color: #5B6F5A;
+}
+
+main input {
+    border: none;
+    font-size: 3vh;
+    border-bottom: 1px solid #000000;
+    background-color: #CEE8CD;
+    box-sizing: border-box;
+}
+
+main button {
+    font-size: 2vh;
+    padding: 1.2vh;
+}
+
+/* Resultado */
+footer {
+    width: 80vw;
+    height: 15vh;
+    background-color: #CEE8CD;
+    font-size: 3vh;
+    margin: auto;
+    padding: 2vw;
+    box-sizing: border-box;
+}
