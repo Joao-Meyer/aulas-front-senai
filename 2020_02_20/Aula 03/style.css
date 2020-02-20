@@ -1,0 +1,17 @@
+#resultados {
+    display: flex;
+}
+
+.titulo {
+    margin-top: 5px;
+    background-color: #adcdff;
+    border-radius: 3px;
+    text-align: center;
+}
+
+.card {
+    margin: 5px;
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 2px;
+}

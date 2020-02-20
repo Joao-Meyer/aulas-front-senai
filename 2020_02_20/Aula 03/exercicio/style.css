@@ -1,0 +1,42 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+#containerPagina {
+    width: 1300px;
+    height: 100vh;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: orange;
+}
+
+#containerFormulario {
+    width: 1000px;
+    height: 50vh;
+    margin-top: 200px;
+    float: left;
+    margin-left: 150px;
+    background-color: blue;
+}
+
+.containerCidades {
+    width: 800px;
+    height: 50px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.containerNumero {
+    width: 50px;
+    height: 50px;
+}
+
+.containerCidadeImpar, .containerCidadePar {
+    width: 750px;
+    height: 50px;
+}
+
+.containerCidadePar {
+    background-color: rgba(0, 0, 0, .5);
+}
