@@ -1,0 +1,65 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+#containerPagina {
+    width: 1300px;
+    height: 100vh;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: orange;
+}
+
+#container {
+    width: 600px;
+    min-height: 50vh;
+    height: auto;
+    margin-top: 200px;
+    float: left;
+    margin-left: 350px;
+    background-color: blue;
+}
+
+select {
+    width: 400px;
+    margin-left: 100px;
+    margin-top: 20px;
+}
+
+.containerCidades {
+    width: 500px;
+    height: 500px;
+    margin-top: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #ffffff;
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+
+.containerCidade {
+    width: 500px;
+    height: 25px;
+    box-sizing: border-box;
+}
+
+.containerNumero {
+    width: 25px;
+    height: 25px;
+    border: 1px solid #000000;
+    box-sizing: border-box;
+    float: left;
+}
+
+.containerCidadeImpar, .containerCidadePar {
+    width: 475px;
+    height: 25px;
+    border: 1px solid #000000;
+    box-sizing: border-box;
+    float: left;
+}
+
+.containerCidadeImpar {
+    background-color: rgba(0, 0, 0, .5);
+}
