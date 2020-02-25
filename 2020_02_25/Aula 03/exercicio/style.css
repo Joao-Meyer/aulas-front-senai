@@ -45,7 +45,7 @@ select {
 }
 
 .containerNumero {
-    width: 25px;
+    width: 50px;
     height: 25px;
     border: 1px solid #000000;
     box-sizing: border-box;
@@ -53,7 +53,7 @@ select {
 }
 
 .containerCidadeImpar, .containerCidadePar {
-    width: 475px;
+    width: 450px;
     height: 25px;
     border: 1px solid #000000;
     box-sizing: border-box;
