@@ -8,7 +8,7 @@
     height: 100vh;
     margin-left: auto;
     margin-right: auto;
-    background-color: orange;
+    background-color: rgba(149, 133, 255, .5);
 }
 
 #container {
@@ -18,7 +18,6 @@
     margin-top: 100px;
     float: left;
     margin-left: 350px;
-    background-color: blue;
 }
 
 select {

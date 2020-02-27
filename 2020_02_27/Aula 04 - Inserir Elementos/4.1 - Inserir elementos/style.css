@@ -1,0 +1,34 @@
+.conteiner {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.card {
+    border: 1px solid;
+    margin: 5px;
+}
+
+.card-title {
+    background-color: #ffff70;
+    text-align: center;
+    font-weight: bold;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0px;
+    padding: 0px;
+}
+
+li {
+    padding: 5px;
+    text-align: center;
+}
+
+.card-body li:nth-child(odd) {
+    background-color: #ffca6e;
+}
+
+.card-body li:nth-child(even) {
+    background-color: #ffaa17;
+}
