@@ -2,8 +2,8 @@
 
 let DB = [
     {
-        "Country": "Brasil",
-        "CountryCode": "BR",
+        "Country": "Selecione um País",
+        "CountryCode": "",
         "Confirmed": "<div class='spinner orange'></div>",
         "Deaths": "<div class='spinner green'></div>",
         "Recovered": "<div class='spinner blue'></div>"
@@ -29,7 +29,9 @@ const getYesterdayDate = () => {
     return year + "-" + month + "-" + day;
 }
 
-const showData = ( data ) => {
+const showData = () => {
+    const data = DB[0];
+
     const infoPanel = `
         <div class="containerCountryName"> ${ data.Country } </div>
 
@@ -53,7 +55,9 @@ const showData = ( data ) => {
     $container.innerHTML = infoPanel;
 
     const $info = document.getElementById( 'containerDados' );
-    // $info.removeChild ( $info.firstChild );
+    if( $info.firstChild ){
+        $info.removeChild ( $info.firstChild );
+    }
     $info.appendChild ( $container );
 }
 
@@ -63,10 +67,10 @@ const getCountryJson = async ( country, date ) => {
     var json = await api.json();
     DB = await json;
 
-    test( await DB );
+    return await DB;
 }
 
-const test = async ( DB ) => {
+const getCountryInfo = ( DB ) => {
     if( DB.length > 1 ){
         var cases = 0;
         var deaths = 0;
@@ -86,17 +90,20 @@ const test = async ( DB ) => {
             "Recovered": recovers
         }]
     }
-
-    console.log( DB );
 }
 
-const findCountry = ( event ) => {
-    const countryCode = event.target.parentNode.id;
-    console.log( countryCode );
+const findCountry = async ( event ) => {
+    const countryCode = event.target.id;
+    
+    getCountryInfo( await getCountryJson( countryCode, await getYesterdayDate() ) );
+
+    showData();
 }
 
-showData( DB[0] );
+showData();
 
 document.querySelector( 'svg' ).addEventListener( 'click', findCountry );
 
-getCountryJson( "br", getYesterdayDate());
+// getCountryInfo( getCountryJson( "br", getYesterdayDate() ) );
+
+// showData();
