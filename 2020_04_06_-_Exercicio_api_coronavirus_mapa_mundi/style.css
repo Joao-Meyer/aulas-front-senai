@@ -1,0 +1,82 @@
+#containerConteudo {
+    width: 1200px;
+    height: 600px;
+    box-sizing: border-box;
+    margin-top: 25px;
+    margin-left: auto;
+    margin-right: auto;
+    /* background-color: royalblue; */
+}
+
+#containerMapa {
+    width: 720px;
+    height: 600px;
+    float: left;
+    box-sizing: border-box;
+    background-color: rgba(123, 235, 012, .5);
+}
+
+#containerDados {
+    width: 480px;
+    height: 600px;
+    float: left;
+    box-sizing: border-box;
+    background-color: salmon;
+}
+
+.containerCountryName {
+    width: 480px;
+    height: 120px;
+    text-align: center;
+    font-size: 110px;
+    background-color: seagreen;
+}
+
+.containerCountryCases {
+    width: 480px;
+    height: 160px;
+    /* text-align: center; */
+    background-color: springgreen;
+}
+
+.containerCountryDeaths {
+    width: 480px;
+    height: 160px;
+    /* text-align: center; */
+    background-color: green;
+}
+
+.containerCountryRecovers {
+    width: 480px;
+    height: 160px;
+    /* text-align: center; */
+    background-color: greenyellow;
+}
+
+.numbers {
+    width: 480px;
+    height: 96px;
+    text-align: center;
+    font-size: 90px;
+}
+
+.titles {
+    width: 480px;
+    height: 64px;
+    text-align: center;
+    font-size: 60px;
+}
+
+svg {
+    width: 720px;
+    height: 600px;
+}
+
+path {
+    stroke: white;
+    stroke-width: 3px;
+}
+
+path:hover {
+    fill: royalblue;
+}
