@@ -1,0 +1,188 @@
+.centraliza {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+/* Container Geral */
+#conteudoSite {
+    width: 1200px;
+    min-height: 800px;
+    height: auto;
+}
+
+/* Conteudo Inicial */
+#conteinerInicial {
+    width: 1200px;
+    min-height: 300px;
+    height: auto;
+    display: block;
+}
+
+#conteinerNomeInicial {
+    width: 720px;
+    height: 150px;
+    text-align: center;
+}
+
+#conteinerNomeInicial h1 {
+    font-size: 4em;
+}
+
+#conteinerBarraPesquisaInicial {
+    width: 720px;
+    /* min-height: 50px;
+    height: auto; */
+    height: 50px;
+}
+
+#barraDePesquisaInicial {
+    width: 670px;
+    height: 50px;
+    float: left;
+    background-color: lawngreen;
+}
+
+#conteinerImagemBuscaInicial {
+    width: 50px;
+    height: 50px;
+    float: left;
+    background-color: lightgreen;
+}
+
+#conteinerResultadosPesquisaInicial {
+    width: 670px;
+    min-height: 50px;
+    height: auto;
+    float: left;
+    /* margin-top: 50px; */
+    background-color: lightpink;
+}
+
+/* Conteudo Posterior */
+#conteinerPosterior {
+    width: 1200px;
+    min-height: 800px;
+    height: auto;
+    display: block;
+}
+
+#conteinerNomeHeroiBarraPesquisa {
+    width: 1200px;
+    height: 100px;
+}
+
+#conteinerNomeHeroi {
+    width: 700px;
+    height: 100px;
+    float: left;
+}
+
+#conteinerBarraPesquisaPosterior {
+    width: 500px;
+    height: 50px;
+    margin-top: 25px;
+    float: left;
+}
+
+#barraDePesquisaPosterior {
+    width: 450px;
+    height: 50px;
+    float: left;
+    background-color: lime;
+}
+
+#conteinerImagemBuscaPosterior {
+    width: 50px;
+    height: 50px;
+    float: left;
+    background-color: limegreen;
+}
+
+#conteinerResultadosPesquisaPosterior {
+    width: 450px;
+    min-height: 50px;
+    height: auto;
+    float: left;
+    background-color: magenta;
+}
+
+#conteinerImagemInformacoes {
+    width: 1200px;
+    min-height: 800px;
+    height: auto;
+}
+
+#conteinerImagemHeroi {
+    width: 480px;
+    height: 600px;
+    float: left;
+    background-color: maroon;
+}
+
+#conteinerInformacoesHeroi {
+    width: 720px;
+    min-height: 600px;
+    height: auto;
+    float: left;
+}
+
+#informacoesEsquerda {
+    width: 360px;
+    min-height: 600px;
+    height: auto;
+    box-sizing: border-box;
+    padding-left: 20px;
+    padding-right: 10px;
+    float: left;
+}
+
+#powerStats {
+    width: 300px;
+    min-height: 300px;
+    height: auto;
+    margin-bottom: 10px;
+    background-color: mediumaquamarine;
+}
+
+#appearence {
+    width: 300px;
+    min-height: 350px;
+    height: auto;
+    margin-bottom: 10px;
+    background-color: mediumaquamarine;
+}
+
+#connections {
+    width: 300px;
+    min-height: 250px;
+    height: auto;
+    margin-bottom: 10px;
+    background-color: mediumaquamarine;
+}
+
+#informacoesDireita {
+    width: 360px;
+    min-height: 600px;
+    height: auto;
+    box-sizing: border-box;
+    padding-left: 10px;
+    padding-right: 20px;
+    float: left;
+}
+
+#work {
+    width: 300px;
+    min-height: 250px;
+    height: auto;
+    margin-bottom: 10px;
+    background-color: mediumaquamarine;
+}
+
+#biography {
+    width: 300px;
+    min-height: 750px;
+    height: auto;
+    margin-bottom: 10px;
+    background-color: mediumaquamarine;
+}
