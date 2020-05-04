@@ -40,14 +40,24 @@
     width: 670px;
     height: 50px;
     float: left;
-    background-color: lawngreen;
+    /* background-color: lawngreen; */
+}
+
+#pesquisaInicial {
+    width: 665px;
+    height: 45px;
+    /* border-radius: 25px; */
+    font-size: 2em;
+    text-align: center;
 }
 
 #conteinerImagemBuscaInicial {
     width: 50px;
     height: 50px;
     float: left;
-    background-color: lightgreen;
+    background-image: url(../imagens/lupa.png);
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 #conteinerResultadosPesquisaInicial {
@@ -92,11 +102,18 @@
     background-color: lime;
 }
 
+#pesquisaPosterior {
+    width: 440px;
+    height: 45px;
+}
+
 #conteinerImagemBuscaPosterior {
     width: 50px;
     height: 50px;
     float: left;
-    background-color: limegreen;
+    background-image: url(../imagens/lupa.png);
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 #conteinerResultadosPesquisaPosterior {
