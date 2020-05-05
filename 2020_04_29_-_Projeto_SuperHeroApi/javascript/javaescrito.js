@@ -1,9 +1,11 @@
 "use strict";
+// Access-Control-Allow-Origin: https://www.superheroapi.com
+// Access-Control-Allow-Origin: *
 
 const $barraPesquisaInicial = document.getElementById( 'pesquisaInicial' );
 const $barraPesquisaPosterior = document.getElementById( 'pesquisaPosterior' );
-const $conteinerResultadoPesquisaInicial = document.getElementById( 'conteinerResultadoPesquisaInicial' );
-const $conteinerResultadoPesquisaPosterior = document.getElementById( 'conteinerResultadoPesquisaPosterior' );
+const $conteinerResultadoPesquisaInicial = document.getElementById( 'conteinerResultadosPesquisaInicial' );
+const $conteinerResultadoPesquisaPosterior = document.getElementById( 'conteinerResultadosPesquisaPosterior' );
 
 let heroInfo = [{
     "id": "",
@@ -96,12 +98,32 @@ const infoFill = () => {
     }
 }
 
+const resultsFill = ( results ) => {
+    const $conteinerTemporario = document.createElement( 'div' );
+
+    results.forEach(element => {
+        $conteinerTemporario.innerHTML += `<h1>${element}</h1>`;
+    });
+
+    if( $conteinerResultadoPesquisaInicial.firstChild  && $conteinerResultadoPesquisaPosterior.firstChild ){
+        $conteinerResultadoPesquisaInicial.removeChild( $conteinerResultadoPesquisaInicial.firstChild );
+    $conteinerResultadoPesquisaPosterior.removeChild( $conteinerResultadoPesquisaPosterior.firstChild );
+    }
+
+    $conteinerResultadoPesquisaInicial.appendChild( $conteinerTemporario );
+    $conteinerResultadoPesquisaPosterior.appendChild( $conteinerTemporario );
+
+    console.log($conteinerResultadoPesquisaInicial);
+    console.log($conteinerResultadoPesquisaPosterior);
+}
+
 const heroSearch = async( heroName ) => {
-    const url = `https://www.superheroapi.com/api/1697582160383693/search/${heroName}`;
+    const url = `https://www.superheroapi.com/api.php/1697582160383693/search/${heroName}`;
     const getResults = await fetch( url );
+    const getJson = await getResults.json();
     console.log( heroName );
-    console.log( url );
-    console.log( getResults );
+
+    resultsFill( await getJson.results );
 }
 
 $barraPesquisaInicial.addEventListener( 'keyup', () => heroSearch( $barraPesquisaInicial.value ) );
