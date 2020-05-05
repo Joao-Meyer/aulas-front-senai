@@ -1,6 +1,11 @@
 "use strict";
 
-const heroInfo = [{
+const $barraPesquisaInicial = document.getElementById( 'pesquisaInicial' );
+const $barraPesquisaPosterior = document.getElementById( 'pesquisaPosterior' );
+const $conteinerResultadoPesquisaInicial = document.getElementById( 'conteinerResultadoPesquisaInicial' );
+const $conteinerResultadoPesquisaPosterior = document.getElementById( 'conteinerResultadoPesquisaPosterior' );
+
+let heroInfo = [{
     "id": "",
     "name": "<div class='spinner blue'></div>",
     "powerstats": {
@@ -49,7 +54,7 @@ const heroInfo = [{
     }
 }];
 
-const url = "https://www.superheroapi.com/api.php/1697582160383693/search/";
+// const url = "https://www.superheroapi.com/api.php/1697582160383693/search/";
 
 const infoFill = () => {
     let heroName = document.getElementById( 'conteinerNomeHeroi' );
@@ -91,6 +96,17 @@ const infoFill = () => {
     }
 }
 
+const heroSearch = async( heroName ) => {
+    const url = `https://www.superheroapi.com/api/1697582160383693/search/${heroName}`;
+    const getResults = await fetch( url );
+    console.log( heroName );
+    console.log( url );
+    console.log( getResults );
+}
+
+$barraPesquisaInicial.addEventListener( 'keyup', () => heroSearch( $barraPesquisaInicial.value ) );
+$barraPesquisaPosterior.addEventListener( 'keyup', () => heroSearch( $barraPesquisaPosterior.value ) );
+
 infoFill();
 
-console.log( heroInfo );
+// console.log( heroInfo );
