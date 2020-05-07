@@ -9,49 +9,127 @@ const $conteinerResultadoPesquisaPosterior = document.getElementById( 'conteiner
 
 // const $heroisResultado = document.getElementsByClassName( 'heroisResultado' );
 
+// let heroInfo = [{
+//     "id": "",
+//     "name": "<div class='spinner blue'></div>",
+//     "powerstats": {
+//         "intelligence": "<div class='spinner green'></div>",
+//         "strength": "<div class='spinner green'></div>",
+//         "speed": "<div class='spinner green'></div>",
+//         "durability": "<div class='spinner green'></div>",
+//         "power": "<div class='spinner green'></div>",
+//         "combat": "<div class='spinner green'></div>"
+//     },
+//     "biography": {
+//         "full-name": "<div class='spinner green'></div>",
+//         "alter-egos": "<div class='spinner green'></div>",
+//         "aliases": {
+//             "0": "<div class='spinner green'></div>"
+//         },
+//         "place-of-birth": "<div class='spinner green'></div>",
+//         "first-appearence": "<div class='spinner green'></div>",
+//         "publisher": "<div class='spinner green'></div>",
+//         "alignment": "<div class='spinner green'></div>"
+//     },
+//     "appearance": {
+//         "gender": "<div class='spinner green'></div>",
+//         "race": "<div class='spinner green'></div>",
+//         "height": {
+//             "0": "<div class='spinner green'></div>",
+//             "1": "<div class='spinner green'></div>"
+//         },
+//         "weight": {
+//             "0": "<div class='spinner green'></div>",
+//             "1": "<div class='spinner green'></div>"
+//         },
+//         "eye-color": "<div class='spinner green'></div>",
+//         "hair-color": "<div class='spinner green'></div>"
+//     },
+//     "work": {
+//         "occupation": "<div class='spinner green'></div>",
+//         "base": "<div class='spinner green'></div>"
+//     },
+//     "connections": {
+//         "group-affiliation": "<div class='spinner green'></div>",
+//         "relatives": "<div class='spinner green'></div>"
+//     },
+//     "image": {
+//         "url": 
+//     }
+// }];
+
 let heroInfo = [{
     "id": "",
-    "name": "<div class='spinner blue'></div>",
+    "name": `<div class='letraGrande'>
+                    <div class='spinner blue'></div>
+                </div>`,
     "powerstats": {
-        "intelligence": "<div class='spinner green'></div>",
-        "strength": "<div class='spinner green'></div>",
-        "speed": "<div class='spinner green'></div>",
-        "durability": "<div class='spinner green'></div>",
-        "power": "<div class='spinner green'></div>",
-        "combat": "<div class='spinner green'></div>"
+        "intelligence": `<div class='letraNormal'>Intelligence: 
+                                <div class='spinner green'></div>
+                            </div>`,
+        "strength": `<div class='letraNormal'>Strength: 
+                            <div class='spinner green'></div>
+                        </div>`,
+        "speed": `<div class='letraNormal'>Speed: 
+                        <div class='spinner green'></div>
+                    </div>`,
+        "durability": `<div class='letraNormal'>Durability: 
+                            <div class='spinner green'></div>
+                        </div>`,
+        "power": `<div class='letraNormal'>Power: 
+                        <div class='spinner green'></div>
+                    </div>`,
+        "combat": `<div class='letraNormal'>Combat: 
+                        <div class='spinner green'></div>
+                    </div>`
     },
     "biography": {
-        "full-name": "<div class='spinner green'></div>",
-        "alter-egos": "<div class='spinner green'></div>",
-        "aliases": {
-            "0": "<div class='spinner green'></div>"
-        },
-        "place-of-birth": "<div class='spinner green'></div>",
-        "first-appearence": "<div class='spinner green'></div>",
-        "publisher": "<div class='spinner green'></div>",
-        "alignment": "<div class='spinner green'></div>"
+        "full-name": `<div class='letraNormal'>Full name:</div>
+                        <div class='spinner green'></div>`,
+        "alter-egos": `<div class='letraNormal'>Alter egos:</div>
+                        <div class='spinner green'></div>`,
+        "aliases": `<div class='letraNormal'>Aliases:</div>
+                        <div class='spinner green'></div>`,
+        "place-of-birth": `<div class='letraNormal'>Place of birth:</div>
+                            <div class='spinner green'></div>`,
+        "first-appearence": `<div class='letraNormal'>First appearence:</div>
+                                <div class='spinner green'></div>`,
+        "publisher": `<div class='letraNormal'>Publisher:</div>
+                        <div class='spinner green'></div>`,
+        "alignment": `<div class='letraNormal'>Alignment:</div>
+                        <div class='spinner green'></div>`
     },
     "appearance": {
-        "gender": "<div class='spinner green'></div>",
-        "race": "<div class='spinner green'></div>",
-        "height": {
-            "0": "<div class='spinner green'></div>",
-            "1": "<div class='spinner green'></div>"
-        },
-        "weight": {
-            "0": "<div class='spinner green'></div>",
-            "1": "<div class='spinner green'></div>"
-        },
-        "eye-color": "<div class='spinner green'></div>",
-        "hair-color": "<div class='spinner green'></div>"
+        "gender": `<div class='letraNormal'>Gender: 
+                            <div class='spinner green'></div>
+                        </div>`,
+        "race": `<div class='letraNormal'>Race: 
+                            <div class='spinner green'></div>
+                        </div>`,
+        "height": `<div class='letraNormal'>Height: 
+                            <div class='spinner green'></div>
+                        </div>`,
+        "weight": `<div class='letraNormal'>Weight: 
+                            <div class='spinner green'></div>
+                        </div>`,
+        "eye-color": `<div class='letraNormal'>Eye color: 
+                            <div class='spinner green'></div>
+                        </div>`,
+        "hair-color": `<div class='letraNormal'>Hair color: 
+                            <div class='spinner green'></div>
+                        </div>`
     },
     "work": {
-        "occupation": "<div class='spinner green'></div>",
-        "base": "<div class='spinner green'></div>"
+        "occupation": `<div class='letraNormal'>Occupation:</div>
+                        <div class='spinner green'></div>`,
+        "base": `<div class='letraNormal'>Base:</div>
+                    <div class='spinner green'></div>`
     },
     "connections": {
-        "group-affiliation": "<div class='spinner green'></div>",
-        "relatives": "<div class='spinner green'></div>"
+        "group-affiliation": `<div class='letraNormal'>Group affiliation:</div>
+                                <div class='spinner green'></div>`,
+        "relatives": `<div class='letraNormal'>Relatives:</div>
+                            <div class='spinner green'></div>`
     },
     "image": {
         "url": "<div class='spinner orange'></div>"
@@ -79,15 +157,15 @@ const infoFill = () => {
     // heroBiography.innerHTML = heroInfo[0].biography["full-name"];
 
     //Esvazia Power Stats
-    heroPowerStats.innerHTML = "";
+    heroPowerStats.innerHTML = "<div class='nomeSecao letraNormal'>Power Stats</div>";
     //Esvazia Appearence
-    heroAppearance.innerHTML = "";
+    heroAppearance.innerHTML = "<div class='nomeSecao letraNormal'>Appearance</div>";
     //Esvazia Connections
-    heroConnections.innerHTML = "";
+    heroConnections.innerHTML = "<div class='nomeSecao letraNormal'>Connections</div>";
     //Esvazia Work
-    heroWork.innerHTML = "";
+    heroWork.innerHTML = "<div class='nomeSecao letraNormal'>Work</div>";
     //Esvazia Biography
-    heroBiography.innerHTML = "";
+    heroBiography.innerHTML = "<div class='nomeSecao letraNormal'>Biography</div>";
 
     //Preenche Power Stats
     for (var property in heroInfo[0].powerstats){
@@ -114,12 +192,6 @@ const infoFill = () => {
 const resultsFill = ( results ) => {
     const $conteinerTemporario = document.createElement( 'div' );
 
-    results.forEach(element => {
-        $conteinerTemporario.innerHTML += `<h1 class="heroisResultado" id="${element.id}">${element.name}</h1>`;
-        
-        console.log(element.name);
-    });
-
     if( $conteinerResultadoPesquisaInicial.firstChild ){
         $conteinerResultadoPesquisaInicial.removeChild( $conteinerResultadoPesquisaInicial.firstChild );
     }
@@ -128,23 +200,63 @@ const resultsFill = ( results ) => {
         $conteinerResultadoPesquisaPosterior.removeChild( $conteinerResultadoPesquisaPosterior.firstChild );
     }
 
+    results.forEach(element => {
+        $conteinerTemporario.innerHTML += `<h1 class="heroisResultado" id="${element.id}">${element.name}</h1>`;
+    });
+
+    const $teste = document.createElement( 'div' );
+    $teste.innerHTML = "<h1>Batata</h1>";
+
     $conteinerResultadoPesquisaInicial.appendChild( $conteinerTemporario );
     $conteinerResultadoPesquisaPosterior.appendChild( $conteinerTemporario );
 
     console.log($conteinerResultadoPesquisaInicial.firstChild);
-    console.log($conteinerResultadoPesquisaPosterior);
+    console.log($conteinerResultadoPesquisaPosterior.firstChild);
+}
+
+const showResults = () => {
+    if( $barraPesquisaInicial.value || $barraPesquisaPosterior.value ){
+        $conteinerResultadoPesquisaInicial.style.display = "block";
+        $conteinerResultadoPesquisaPosterior.style.display = "block";
+    }
+    else {
+        $conteinerResultadoPesquisaInicial.style.display = "none";
+        $conteinerResultadoPesquisaPosterior.style.display = "none";
+    }
 }
 
 const heroSearch = async( heroName ) => {
     const url = `https://www.superheroapi.com/api.php/1697582160383693/search/${heroName}`;
     const getResults = await fetch( url );
     const getJson = await getResults.json();
-    console.log( heroName );
-
+   
     resultsFill( await getJson.results );
+
+    showResults();
 }
 
-const heroInfoSearch = async ( heroId ) => {
+const screenClean = () => {
+    $barraPesquisaInicial.value = "";
+    $barraPesquisaPosterior.value = "";
+
+    const $conteinerInicial = document.getElementById( 'conteinerInicial' );
+    const $conteinerPosterior = document.getElementById( 'conteinerPosterior' );
+
+    // if( $conteinerInicial.style.display == "block" ){
+        $conteinerInicial.style.display = "none";
+    // }
+    // if( $conteinerPosterior.style.display == "none" ){
+        $conteinerPosterior.style.display = "block";
+    // }
+}
+
+const heroInfoSearch = async ( event ) => {
+    let heroId = event.target.id;
+
+    screenClean();
+
+    showResults();
+
     const url = `https://www.superheroapi.com/api.php/1697582160383693/${heroId}`;
     const getResults = await fetch( url );
     const getJson = await getResults.json();
@@ -154,8 +266,6 @@ const heroInfoSearch = async ( heroId ) => {
     getJson.biography.aliases.forEach(element => {
         aliases += `<div class='letraNormal letraCentralizada'>${element}</div>`;
     });
-
-    console.log(aliases);
 
     heroInfo = [{
         "id": getJson.id,
@@ -208,15 +318,13 @@ const heroInfoSearch = async ( heroId ) => {
         }
     }];
 
-    console.log( heroInfo );
-
     infoFill();
 }
 
 $barraPesquisaInicial.addEventListener( 'keyup', () => heroSearch( $barraPesquisaInicial.value ) );
 $barraPesquisaPosterior.addEventListener( 'keyup', () => heroSearch( $barraPesquisaPosterior.value ) );
 
-$conteinerResultadoPesquisaPosterior.addEventListener( 'click', () => heroInfoSearch( heroId ) );
+$conteinerResultadoPesquisaPosterior.addEventListener( 'click', () => heroInfoSearch( event ) );
 
 infoFill();
 
