@@ -10,6 +10,7 @@
     line-height: 2.5em;
     text-align: center;
     font-weight: bold;
+    font-family: fantasy, Arial;
 }
 
 .letraNormal {
@@ -19,6 +20,7 @@
     padding-left: 10px;
     font-size: 1.7em;
     line-height: 1.7em;
+    font-family: Anton, fantasy, Arial;
 }
 
 .letraCentralizada {
@@ -32,22 +34,25 @@
     height: auto;
 }
 
-/* Conteudo Inicial */
-#conteinerInicial {
-    width: 1200px;
-    min-height: 300px;
-    height: auto;
-    display: block;
-}
-
 #conteinerNomeInicial {
     width: 720px;
     height: 150px;
+    box-sizing: border-box;
+    padding-top: 50px;
     text-align: center;
 }
 
 #conteinerNomeInicial h1 {
     font-size: 4em;
+    font-family: Anton, fantasy, Arial;
+}
+
+/* Conteudo Inicial */
+#conteinerInicial {
+    width: 1200px;
+    min-height: 100px;
+    height: auto;
+    display: block;
 }
 
 #conteinerBarraPesquisaInicial {
@@ -178,6 +183,7 @@
 #conteinerImagemHeroi {
     width: 480px;
     height: 600px;
+    border-radius: 5px;
     float: left;
     background-color: maroon;
 }
@@ -185,6 +191,7 @@
 .imagemHeroi {
     width: 480px;
     height: 600px;
+    border-radius: 5px;
 }
 
 #conteinerInformacoesHeroi {
@@ -211,28 +218,31 @@
     border-bottom: 2px solid black;
 }
 
+.formataSecao {
+    box-sizing: border-box;
+    border-radius: 5px;
+    border: 1px solid black;
+    margin-bottom: 10px;
+    /* background-color: rgba(255, 41, 41, 0.8); */
+    background-color: white;
+}
+
 #powerStats {
     width: 300px;
     min-height: 300px;
     height: auto;
-    margin-bottom: 10px;
-    background-color: mediumaquamarine;
 }
 
 #appearance {
     width: 300px;
     min-height: 350px;
     height: auto;
-    margin-bottom: 10px;
-    background-color: mediumaquamarine;
 }
 
 #connections {
     width: 300px;
     min-height: 250px;
     height: auto;
-    margin-bottom: 10px;
-    background-color: mediumaquamarine;
 }
 
 #informacoesDireita {
@@ -249,14 +259,10 @@
     width: 300px;
     min-height: 250px;
     height: auto;
-    margin-bottom: 10px;
-    background-color: mediumaquamarine;
 }
 
 #biography {
     width: 300px;
     min-height: 750px;
     height: auto;
-    margin-bottom: 10px;
-    background-color: mediumaquamarine;
 }

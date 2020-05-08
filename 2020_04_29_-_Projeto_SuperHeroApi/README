@@ -1,0 +1,30 @@
+#Hero Searchatron 2000
+
+##Projeto de consumo de API
+
+Este projeto teve como objetivo consumir uma API que não conhecessemos, apenas com o conhecimento prévio, a documentação da API e os meios que encontrássemos para tal.
+"Sei fazendo, faço sabendo"
+
+##Competências
+-> Consumir uma API a partir de sua documentação (no caso em inglês)
+-> Fazer uma página simples porém dinâmica
+-> Documentação simples de objetivos e competências
+-> Pesquisa, independente, em diversos meios para o saneamento de necessidades que surgem conforme ocorre o progresso da ferramenta
+-> Localização e correção de bugs
+-> Utilização básica das ferramentas GIT e GITHUB
+-> Reutilização de componentes feitos anteriormente
+-> Administração de tempo de confecção de projeto
+
+##Possiveis erros e suas soluções
+-> Em caso de qualquer erro entre em contato com o desenvolvedor
+
+##Passo a passo do consumo da API
+-> Primeiro é necessário ir na página do fornecedor da API (https://superheroapi.com/index.html) para adquirir uma chave de acesso (access token) por meio do Facebook
+-> Pesquisa efetiva com o link da API (https://superheroapi.com/api/access-token/character-id) com o Token de acesso e o complemento desejado
+Ex: https://superheroapi.com/api/123456789/search/batman
+
+# Agradecimentos
+Agradeço aos meus colegas de sala e amigos que por vezes me ajudaram a pensar em soluções e encontrar bugs
+##UBUNTU
+
+# João H. P. Meyer
