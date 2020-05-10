@@ -190,8 +190,6 @@ const infoFill = () => {
 }
 
 const resultsFill = ( results ) => {
-    const $conteinerTemporario = document.createElement( 'div' );
-
     if( $conteinerResultadoPesquisaInicial.firstChild ){
         $conteinerResultadoPesquisaInicial.removeChild( $conteinerResultadoPesquisaInicial.firstChild );
     }
@@ -200,18 +198,19 @@ const resultsFill = ( results ) => {
         $conteinerResultadoPesquisaPosterior.removeChild( $conteinerResultadoPesquisaPosterior.firstChild );
     }
 
-    results.forEach(element => {
-        $conteinerTemporario.innerHTML += `<h1 class="heroisResultado" id="${element.id}">${element.name}</h1>`;
-    });
+    const $conteinerTemporarioInicial = document.createElement( 'div' );
+    const $conteinerTemporarioPosterior = document.createElement( 'div' );
 
-    const $teste = document.createElement( 'div' );
-    $teste.innerHTML = "<h1>Batata</h1>";
+    if( results != undefined ){
+        results.forEach(element => {
+            $conteinerTemporarioInicial.innerHTML += `<h1 class="heroisResultado" id="${element.id}">${element.name}</h1>`;
+        });
+    }
 
-    $conteinerResultadoPesquisaInicial.appendChild( $conteinerTemporario );
-    $conteinerResultadoPesquisaPosterior.appendChild( $conteinerTemporario );
+    $conteinerTemporarioPosterior.innerHTML = $conteinerTemporarioInicial.innerHTML;
 
-    console.log($conteinerResultadoPesquisaInicial.firstChild);
-    console.log($conteinerResultadoPesquisaPosterior.firstChild);
+    $conteinerResultadoPesquisaInicial.appendChild( $conteinerTemporarioInicial );
+    $conteinerResultadoPesquisaPosterior.appendChild( $conteinerTemporarioPosterior );
 }
 
 const showResults = () => {
@@ -226,13 +225,16 @@ const showResults = () => {
 }
 
 const heroSearch = async( heroName ) => {
-    const url = `https://www.superheroapi.com/api.php/1697582160383693/search/${heroName}`;
-    const getResults = await fetch( url );
-    const getJson = await getResults.json();
-   
-    resultsFill( await getJson.results );
+    heroName = "" + heroName;
+    // if( heroName.lenght >= 2 ){
+        const url = `https://www.superheroapi.com/api.php/1697582160383693/search/${heroName}`;
+        const getResults = await fetch( url );
+        const getJson = await getResults.json();
+    
+        resultsFill( await getJson.results );
 
-    showResults();
+        showResults();
+    // }
 }
 
 const screenClean = () => {
@@ -242,12 +244,12 @@ const screenClean = () => {
     const $conteinerInicial = document.getElementById( 'conteinerInicial' );
     const $conteinerPosterior = document.getElementById( 'conteinerPosterior' );
 
-    // if( $conteinerInicial.style.display == "block" ){
+    if( $conteinerInicial.style.display == "block" ){ 
         $conteinerInicial.style.display = "none";
-    // }
-    // if( $conteinerPosterior.style.display == "none" ){
+    }
+    if( $conteinerPosterior.style.display == "none" ){
         $conteinerPosterior.style.display = "block";
-    // }
+    }
 }
 
 const heroInfoSearch = async ( event ) => {
@@ -324,6 +326,7 @@ const heroInfoSearch = async ( event ) => {
 $barraPesquisaInicial.addEventListener( 'keyup', () => heroSearch( $barraPesquisaInicial.value ) );
 $barraPesquisaPosterior.addEventListener( 'keyup', () => heroSearch( $barraPesquisaPosterior.value ) );
 
+$conteinerResultadoPesquisaInicial.addEventListener( 'click', () => heroInfoSearch( event ) );
 $conteinerResultadoPesquisaPosterior.addEventListener( 'click', () => heroInfoSearch( event ) );
 
 infoFill();
