@@ -244,12 +244,12 @@ const screenClean = () => {
     const $conteinerInicial = document.getElementById( 'conteinerInicial' );
     const $conteinerPosterior = document.getElementById( 'conteinerPosterior' );
 
-    if( $conteinerInicial.style.display == "block" ){ 
+    // if( $conteinerInicial.style.display == "block" ){ 
         $conteinerInicial.style.display = "none";
-    }
-    if( $conteinerPosterior.style.display == "none" ){
+    // }
+    // if( $conteinerPosterior.style.display == "none" ){
         $conteinerPosterior.style.display = "block";
-    }
+    // }
 }
 
 const heroInfoSearch = async ( event ) => {
