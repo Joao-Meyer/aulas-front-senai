@@ -49,12 +49,23 @@ const remover = () => {
 
         var nomes = JSON.parse( localStorage.getItem( 'nomes' ) );
 
-        localStorage.removeItem( nomes.filter( ( e ) => { return e == nome } ) );
+        alert(nomes);
+
+        // var x = nomes.filter( ( item ) => { return item != nome } )
+
+        // console.log(x[0]);
+
+        // localStorage.removeItem(  );
 
         // console.log( nomes.filter( ( e ) => { return e == nome } ) );
 
+        // localStorage.setItem( 'nomes', JSON.stringify( x ) );
     }
     atualizarLista();
+}
+
+const atualizar = () => {
+    alert('Atualizar será implementado futuramente...');
 }
 
 const limpar = () => {
@@ -66,4 +77,5 @@ const limpar = () => {
 atualizarLista();
 $buttonAdicionar.addEventListener('click', ()=>{ adicionar() })
 $buttonRemover.addEventListener('click', ()=>{ remover() })
+$buttonAtualizar.addEventListener('click', ()=>{ atualizar() })
 $buttonLimpar.addEventListener('click', ()=>{ limpar() })
