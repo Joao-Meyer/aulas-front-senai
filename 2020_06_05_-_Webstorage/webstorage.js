@@ -30,8 +30,8 @@ const atualizarLista = () => {
 
     if( existeNomes() ){
         var json = transformaEmJason( 'nomes' );
-        json.forEach( objeto => {
-            $listaCadastrados.innerHTML += `<div>${ objeto.nome }</div>`;
+        json.forEach( ( key ) => {
+            $listaCadastrados.innerHTML += `<div>${ key.nome }</div>`;
         })
     }
 }
