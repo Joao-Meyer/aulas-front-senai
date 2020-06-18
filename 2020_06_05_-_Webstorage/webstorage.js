@@ -16,7 +16,10 @@ const existeNomes = () => {
 }
 
 const transformaEmJason = ( key ) => {
+    // var x = JSON.parse( localStorage.getItem( key ) ); 
     return JSON.parse( localStorage.getItem( key ) );
+    // console.log(x);
+    // return x;
 }
 
 const transformaEmString = ( json ) => {
@@ -30,9 +33,9 @@ const atualizarLista = () => {
 
     if( existeNomes() ){
         var json = transformaEmJason( 'nomes' );
-        json.forEach( ( key ) => {
+        json.forEach( key => {
             $listaCadastrados.innerHTML += `<div>${ key.nome }</div>`;
-        })
+        });
     }
 }
 
@@ -93,8 +96,13 @@ const atualizar = () => {
 
         var nomes = transformaEmJason( 'nomes' );
 
+        // console.log(nomes);
+
         var nomesAtualizados = nomes.map( n => { if( n.nome == nome ){
-                    return n.nome = novoNome;
+                    return n = {'nome' : novoNome };
+                }
+                else{
+                    return n
                 }
             }
         );
