@@ -114,3 +114,35 @@ body {
     font: bold calc(2px + 1vw) sans-serif;
     margin: 1vw;
 }
+
+.tabela {
+    width: 100%;
+    background-color: #ea73da;
+    border-radius: 5px;
+}
+
+th {
+    padding: 5px;
+    color: #ffffff;
+    font: bold calc( 3px + 1vw ) sans-serif;
+}
+
+td {
+    border-radius: 5px;
+    border: 1px solid #ffffff;
+    color: #ffffff;
+    font: bold calc( 2px + 1vw ) sans-serif;
+}
+
+.registros tr {
+    background-color: #ea73da;
+}
+
+.registros tr:hover {
+    background-color: #ffffff;
+}
+
+.registros tr:hover > td {
+    background-color: #ffffff;
+    color: #000000;
+}

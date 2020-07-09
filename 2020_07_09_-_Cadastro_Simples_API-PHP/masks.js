@@ -15,8 +15,10 @@ export const validador = ( elemento ) => {
     elemento.addEventListener( 'input', ( evento ) => {
         const $input = evento.target;
         const tipoMascara = $input.dataset.type;
-    
-        $input.value = masks[ tipoMascara ]( $input.value );
+        
+        if( masks.hasOwnProperty( tipoMascara ) ){
+            $input.value = masks[ tipoMascara ]( $input.value );
+        }
     } );
 }
 
