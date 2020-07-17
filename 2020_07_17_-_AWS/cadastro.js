@@ -12,26 +12,35 @@ validador( document.getElementById( 'form' ) );
 
 validadorEmail( document.getElementById( 'email' ) );
 
-const cargaDados = async ( ) => {
-    const $registros = document.getElementById( 'registros' );
+const criaElemento = ( data ) => {
+  const $registros = document.getElementById( 'registros' );
+  
+  data.forEach( element => {
+    const $tr = document.createElement( 'tr' );
 
+    $tr.innerHTML = `
+        <td>${element.id}</td>
+        <td>${element.nome}</td>
+        <td>${element.email}</td>
+        <td>${element.celular}</td>
+        <td>${element.cidade}</td>
+        <td>
+          <button id='editar-${element.id}'>Editar</button>
+          <button id='excluir-${element.id}'>Excluir</button>
+        </td>
+    `;
+    $registros.appendChild( $tr );
+  } );
+}
+
+const getAlunos = ( url ) => fetch ( url ).then ( res => res.json() );
+
+const cargaDados = async ( ) => {
     const url = 'http://localhost/joao/aulas-front-senai/2020_07_09_-_Cadastro_Simples_API-PHP/apiphp-master/alunos/';
 
     const dados = await getAlunos( url );
 
-    dados.data.forEach( element => {
-        const $tr = document.createElement( 'tr' );
-
-        $tr.innerHTML = `
-            <td>${element.id}</td>
-            <td>${element.nome}</td>
-            <td>${element.email}</td>
-            <td>${element.celular}</td>
-            <td>${element.cidade}</td>
-            <td>${element.cep}</td>
-        `;
-        $registros.appendChild( $tr );
-    } );
+    criaElemento( dados.data );
 }
 
 // const alunos = [
@@ -52,8 +61,6 @@ const cargaDados = async ( ) => {
 //         'acoes' : ''
 //     }
 // ];
-
-const getAlunos = ( url ) => fetch ( url ).then ( res => res.json() );
 
 function createAluno( aluno ) {
     const url = 'http://localhost/joao/aulas-front-senai/2020_07_09_-_Cadastro_Simples_API-PHP/apiphp-master/alunos/';
@@ -101,7 +108,6 @@ const salvarAluno = () => {
     console.log(aluno);
 
     createAluno( aluno );
-    cargaDados( );
     ocultarModal();
 }
 

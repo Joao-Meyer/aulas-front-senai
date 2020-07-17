@@ -1,0 +1,148 @@
+body {
+    background-color: coral;
+}
+
+.cadastro-form {
+    background-color: #ffffff;
+    width: 80vw;
+    margin: 10vh auto;
+    border: 5px;
+    box-shadow: 0px 0px 20px black;
+    border-radius: 5px;
+}
+
+.titulo {
+    /* background-color: #1668c4; */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: url('tenor.gif');
+    height: 45px;
+    text-align: center;
+    font: bold calc(12px + 1vw)/45px sans-serif;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    box-shadow: 1px 0px 5px black;
+    color: #ffffff;
+}
+
+.subtitulo {
+    display: flex;
+    justify-content: space-between;
+    padding: 2vw;
+}
+
+.subtitulo > div {
+    color: #fa23da;
+    font: bold calc(12px + 1vw)45px sans-serif;
+    text-shadow: 1px 1px 1px black;
+}
+
+.botao {
+    font: bold calc(2px + 1vw) sans-serif;
+    background-color: #ffffff;
+    border: solid 1px #ea53da;
+    border-radius: 5px;
+    color: #ea73da;
+    box-shadow: 0px 0px 3px black;
+    cursor: pointer;
+}
+
+.botao:hover {
+    background-color: #fa23da;
+    color: #ffffff;
+}
+
+.conteiner-modal {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    /* background-color: rgba(0, 0, 0, 0.4); */
+    background-color: #00000088;
+    top: 0px;
+    left: 0px;
+    z-index: -10;
+    opacity: 0;
+}
+
+.modal {
+    width: 50vw;
+    margin: 10vh auto;
+    box-sizing: border-box;
+    border-radius: 6px;
+    background-color: #ffffff;
+}
+.exibirModal {
+    opacity: 1;
+    z-index: 5000;
+}
+
+.form {
+    display: grid;
+    grid-template-areas: 
+        "nome nome nome nome"
+        "email email celular celular"
+        "endereco numero bairro bairro"
+        "cidade cidade estado cep"
+    ;
+    gap: 10px;
+    padding: 2vw;
+    box-sizing: border-box;
+}
+
+#nome { grid-area: nome; }
+#email { grid-area: email; }
+#celular { grid-area: celular; }
+#endereco { grid-area: endereco; }
+#numero { grid-area: numero; }
+#bairro { grid-area: bairro; }
+#cidade { grid-area: cidade; }
+#estado { grid-area: estado; }
+#cep { grid-area: cep; }
+
+.form > input {
+    width: 100%;
+}
+
+.acao {
+    display: flex;
+    justify-content: center;
+    /* padding: 2vw; */
+}
+
+.botao {
+    font: bold calc(2px + 1vw) sans-serif;
+    margin: 1vw;
+}
+
+.tabela {
+    width: 100%;
+    background-color: #ea73da;
+    border-radius: 5px;
+}
+
+th {
+    padding: 5px;
+    color: #ffffff;
+    font: bold calc( 3px + 1vw ) sans-serif;
+}
+
+td {
+    border-radius: 5px;
+    border: 1px solid #ffffff;
+    color: #ffffff;
+    font: bold calc( 2px + 1vw ) sans-serif;
+}
+
+.registros tr {
+    background-color: #ea73da;
+}
+
+.registros tr:hover {
+    background-color: #ffffff;
+}
+
+.registros tr:hover > td {
+    background-color: #ffffff;
+    color: #000000;
+}
